@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+</head>
+<body>
+
+<div id="app_component">
+    <ol>
+        <!-- 创建一个 todo-item 组件的实例 -->
+        <todo-item v-for="item in groceryList"
+                   v-bind:todo="item"
+                   v-bind:key="item.id"></todo-item>
+    </ol>
+</div>
+
+<script type='text/javascript' src="../jquery/jquery-3.2.1.min.js"></script>
+<script type='text/javascript' src="../vue/vue.min.js"></script>
+<script type='text/javascript' src="../js/component.js"></script>
+</body>
+</html>

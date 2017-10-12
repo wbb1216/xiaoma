@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>router</title>
+</head>
+<body>
+<div id="app_router">
+    <h1>Vue Router</h1>
+
+    <router-link :to="{ name: 'foo', params: { id: 111 }}">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+
+    <router-view name="sidebar"></router-view>
+    <router-view name="main"></router-view>
+</div>
+
+<script type='text/javascript' src="../jquery/jquery-3.2.1.min.js"></script>
+<script type='text/javascript' src="../vue/vue.min.js"></script>
+<script type='text/javascript' src="../vue/vue-router.js"></script>
+<script type='text/javascript' src="../js/router.js"></script>
+</body>
+</html>
