@@ -4,14 +4,15 @@ const Foo = {
 };
 
 const Sidebar = {
-    template: '<div>sidebar</div>'
+    props: ['id'],
+    template: '<div>sidebar{{id}}</div>'
 };
 
 const router_foo = {
     name: 'foo',
     path: '/foo/:id',
     components: {main: Foo, sidebar: Sidebar},
-    props: {main: true, sidebar: false}
+    props: {main: true, sidebar: true}
 };
 
 const router_bar = {
@@ -24,6 +25,7 @@ const routers = [
 ];
 
 const router = new VueRouter({
+    mode: 'history',
     routes: routers
 });
 
